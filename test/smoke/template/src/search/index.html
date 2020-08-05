@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 24px;">
+<head>
+  <%=require('raw-loader!./meta.html') %>
+  <title>Document</title>
+  <!-- 内联引入lib-flexible， 不能打包，需要一打开页面就加载，所以需要放在头部 -->
+  <!-- 通过js实时的检测屏幕的大小并改变html标签的字体大小，再结合rem的特性来完成页面的自适应 -->
+  <script><%=require('raw-loader!babel-loader!../../node_modules/lib-flexible/flexible.js')%></script>
+</head>
+<body>
+  <div id="root"><!--HTML_PLACEHOLDER--></div>
+  <script type="text/javascript" src="https://now8.gtimg.com/now/lib/16.2.0/react.min.js"></script>
+  <script type="text/javascript" src="https://now8.gtimg.com/now/lib/16.2.0/react-dom.min.js"></script>
+  <!--DATA_PLACEHOLDER-->
+</body>
+</html>
